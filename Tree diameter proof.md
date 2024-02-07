@@ -3,7 +3,7 @@
 The longest distance possible in a data tree.
 Or more precisely but less straight-foward: The longest of all the shortest path between two nodes in a data tree.
 Just like the diameter in a circle, the shortest distance(straight line) between two oppsite side is the longest straight line possible in a circle.
-## I. Antipodal Property
+## $I$. Antipodal Property
 Let's denote $Y\in\lambda(X)$ as " $Y$ is one of the furthest node from $X$"
 
 If node $A,B$ forms a diameter, then $B\in\lambda(A)$ and $A\in\lambda(B)$. If not, they are not the longest distance in the tree.
@@ -15,7 +15,7 @@ Which means $A,B$ forms a diameter implies that $A,B$ are antipodal?
 Well that is obious, but how about in reversed? Does $A,B$'s antipodal implies 
 $A,B$ forms a diameter? We are going to find out.
 
-## II. Reverse Property Proof
+## $II$. Reverse Property Proof
 Let's denote some functions:
 
 $Path(X,Y)$ as a function that output the shortest path(a set of nodes in the path)
@@ -69,4 +69,38 @@ yields the conclusion. $X,Y$ being antipodal does garuntee $X,Y$ forming a diame
 
 $Q.E.D$
 
-## III. 
+## $III$. Attempt using $\lambda()$ to find the diameter
+
+#### from chapter $II$: "if $X,Y$ is antipodal, then $Path(X,Y)$ is a diameter"
+
+if there is such $X$ that $X\in\lambda(Y)$ where $Y\in\lambda(X)$, then $Path(X,Y)$ is the diameter.
+what if we had a algorithm that starts with a point, and keep applying $\lambda()$.
+ Until there is an X that doing lambda search twice returns X iself, then the diameter is found.
+ But is that possible? Does it guarantee to find the "reflection node"($\lambda()$ twice returns to itself)? 
+
+Let's find it out! Start with intial node A and work our way to B,C,D,etc... .
+Here we will treat $\lambda()$ like a single value function just to keep everything simple. But we are actually just picking one of
+it's element. In reality, we'll iterate through all the element in $\lambda()$'s output.
+
+Firstly, $B=\lambda(A)$. Then $C=\lambda(B)$. We know that $C$ doesn't always equal to $A$. As the $A$ 
+is arbitary chosen. $C$ always equal to $A$ means that every node is a endpoint of diameter. And we know
+it is impossible. So let's move on(consider worst case $A \ne C$ ), $D=\lambda(C)$, is $D$ a new point?
+
+[insert diagram here]
+
+$B$ is an endpoint, so the picture should actually look like that, E is the fork on A to B,C
+where Path(A,B) and Path(B,C) both passes it.
+
+[insert diagram here]
+
+Where should $D$ connect to the tree though? Let's called the connected part "F". 
+There are 4 types of F here in the simpified tree. a=Distance(A,F), b=Distance(B,F), and so on...
+
+[insert diagram here]
+
+Let's listed out all the possiblities:
+
+1.
+2.
+3.
+4.
