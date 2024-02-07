@@ -4,7 +4,7 @@ The longest distance possible in a data tree.
 Or more precisely but less straight-foward: The longest of all the shortest path between two nodes in a data tree.
 Just like the diameter in a circle, the shortest distance(straight line) between two oppsite side is the longest straight line possible in a circle.
 ## I. Antipodal Property
-Let's denote $Y\in\lambda(X)$ as "$Y$ is one of the furthest node from $X$"
+Let's denote $Y\in\lambda(X)$ as " $Y$ is one of the furthest node from $X$"
 
 If node $A,B$ forms a diameter, then $B\in\lambda(A)$ and $A\in\lambda(B)$. If not, they are not the longest distance in the tree.
 
