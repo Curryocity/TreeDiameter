@@ -24,7 +24,7 @@ $A,B$ forms a diameter? We are going to find out in the next chapter.
 Let's denote some functions:
 
 $Path(X,Y)$ as a function that output the shortest path(a set of nodes in the path)
- from node $X$ to node $Y$ [^1]
+ from node $X$ to node $Y$ (Single valued function, because tree)
 
 $Distance(X,Y)$ as the shortest distance between node $X$ and node $Y$
 
@@ -110,25 +110,25 @@ Let's listed out all the possiblities for the case that $D$ is an unique node, a
 
 1. $F\in Path(A,E)$:
 
-      $Path(C,D) > Path(C,B)$, implies $d>b+f$.
+      $Path(C,D) > Path(C,B)$, implies $d > b+ f$.
 
-      $Path(A,D) < Path(A,B)$, implies $d<b+f$.
+      $Path(A,D) < Path(A,B)$, implies $d < b + f$.
 
       Contradiction!
 
 2. $F\in Path(B,E)$:
 
-      $Path(C,D) > Path(C,B)$, implies $d>b-f$.
+      $Path(C,D) > Path(C,B)$, implies $d > b- f$.
 
-      $Path(A,D) < Path(A,B)$, implies $d<b-f$.
+      $Path(A,D) < Path(A,B)$, implies $d < b - f$.
 
       Contradiction!
 
 3. $F\in Path(C,E)$:
 
-      $Path(C,D) > Path(C,B)$, implies $d>b+f$.
+      $Path(C,D) > Path(C,B)$, implies $d > b + f$.
 
-      $Path(A,D) < Path(A,B)$, implies $d<b-f$.
+      $Path(A,D) < Path(A,B)$, implies $d < b -f $.
 
       Contradiction!
 
@@ -137,7 +137,7 @@ Let's listed out all the possiblities for the case that $D$ is an unique node, a
       This is an overlap of case 1,2,3.
        Would cause: Contradiction!
 
-### Which meant the assumption of "$D$ is an unique node" is false. $D$ must be one of $A,B,C$. (Very good news for the time complexity of our algorithm!)
+### Which meant the assumption of " $D$ is an unique node" is false. $D$ must be one of $A,B,C$. (Very good news for the time complexity of our algorithm!)
 
 If $D=C$, which makes $\lambda(C)=D=C$. Then the tree is made out by single node. In that case, $A=B=C=D$, a trival case. We don't consider that
  becauase remember the reason that we move on to D is to consider the worst case where $B\ne C$ (scroll up if you don't know what i am saying).
@@ -150,7 +150,7 @@ $Path(B,C) > Path(B,A)$, implies $c>a$
 
 The two lines above implies $b>a$
 
-$Path(C,D) > Path(C,B)$, which is equivalent to $Path(C,A) > Path(C,B), $implies $a>b$
+$Path(C,D) > Path(C,B)$, which is equivalent to $Path(C,A) > Path(C,B)$ , implies $a>b$
 
 Contradiction!
 
@@ -158,7 +158,7 @@ Contradiction!
 
 Checking logic consistency with above method:
 
-$Path(C,D) > Path(C,A)$, which is equivalent to $Path(B,A) > Path(C,A)$, implies $b>c$.
+$Path(C,D) > Path(C,A)$, which is equivalent to $Path(B,A) > Path(C,A)$ , implies $b>c$.
 
 Logic stays consistent.
 
