@@ -41,7 +41,7 @@ There exist a path $Path(E_1,E_2)$(Why?), Where $E_1\in Path(A,B)$ and $E_2\in P
  It gets interesting by the fact that $A,B$ and $C,D$ are antipodal pairs. Means that
   the crossing paths of them cannot be bigger than their antipodals. Start by:
 
-![picture1](/CurryDoc/image/Antipodal%20node%20proof_resize.png)
+![picture1](/image/Antipodal%20node%20proof_resize.png)
 
  $Path(A,B)\ge Path(A,C)$
 
@@ -94,7 +94,7 @@ Firstly, $B=\lambda(A)$ . Then $C=\lambda(B)$ . We know that $C$ doesn't always 
  is arbitary chosen, $C$ always equal to $A$ means that every node is a endpoint of diameter. And we know
 it is impossible. So let's consider the worst case $A \ne C$ and move on, we had $D=\lambda(C)$ , is $D$ a new point?
 
-![picture2](/CurryDoc/image/λ%20iteration%201_resize.png)
+![picture2](/image/λ%20iteration%201_resize.png)
 
 $B$ is an endpoint, so the picture below would be more accurate for our use. $E$ is a fork on $A$ to $B,C$
 where $Path(A,B)$ and $Path(B,C)$ both passes it. We define $a=Distance(A,E)$ , $b=Distance(B,E)$ , and so on...
@@ -102,7 +102,7 @@ where $Path(A,B)$ and $Path(B,C)$ both passes it. We define $a=Distance(A,E)$ , 
 Where should $D$ connect to the tree though? Let's called the connected part "$F$".
  There are 4 types of $F$(Pink points) here in the simpified tree.
 
-![picture3](/CurryDoc/image/Possibility%20of%20F_resize.png)
+![picture3](/image/Possibility%20of%20F_resize.png)
 
 Let's listed out all the possiblities for the case that $D$ is an unique node, as well as the statement derive from $\lambda$ relations:
 
